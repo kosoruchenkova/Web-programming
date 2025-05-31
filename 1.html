@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura - Sushi restaurant in Irkutsk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-blossom"></i>
+                    <h1>Sakura</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About us</a></li>
+                        <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+                        <li><a href="#booking"><i class="fas fa-calendar-alt"></i> Booking</a></li>
+                        <li><a href="#contact"><i class="fas fa-map-marker-alt"></i> Contacts</a></li>
+                        <li class="cart-icon" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>The art of Japanese cuisine</h2>
+                <p>Enjoy the authentic taste of Japan in the heart of Irkutsk</p>
+                <a href="#menu" class="btn">Order now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About our restaurant</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Sakura</h3>
+                    <p>Established in 2025, our restaurant combines the traditions of Japanese cuisine with a modern approach to cooking. Our chefs have been trained in Japan and have many years of experience working with seafood.</p>
+                    <p>We pay special attention to the quality of ingredients: fish and seafood are delivered daily, rice for sushi is grown on special plantations, and we get vegetables from local farmers.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.pinimg.com/originals/05/02/ed/0502edab3209cd657259b7deb62df102.jpg" alt="Sakura Restaurant Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <section class="chef-section">
+        <div class="container">
+            <h2>Our Chef</h2>
+            <div class="chef-content">
+                <div class="chef-image">
+                    <img src="https://i.pinimg.com/736x/d0/aa/21/d0aa21ad69cc2eeeb339f848da812c39.jpg" alt="Chef Satoshi Yamamoto">
+                </div>
+                <div class="chef-text">
+                    <h3>Satoshi Yamamoto</h3>
+                    <p>Our chef Satoshi Yamamoto is a true master of Japanese cuisine with over 20 years of experience. Born and raised in Tokyo, where he started his career at the famous Sushi restaurant.</p>
+                    <p>Satoshi trained under the best sushi masters in Japan and then perfected his art at Michelin restaurants in Osaka and Kyoto. His philosophy: "Sushi is not just food, it is meditation embodied in rice and fish".</p>
+                    <p>In 2019, Satoshi received the Golden Knife Award at the Tokyo Chef Competition for innovation in traditional cuisine.</p>
+                    <p>Every morning, Satoshi personally selects the fish from the supplier and then goes out to the guests to hear their impressions. He says, "The guest's happiness is my main reward."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="sushi">Sushi</button>
+                <button class="category-btn" data-category="rolls">Rolls</button>
+                <button class="category-btn" data-category="onigiri">Onigiri</button>
+                <button class="category-btn" data-category="sashimi">Sashimi</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+                <button class="category-btn" data-category="sets">Sets</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="extras">Additional</button>
+            </div>
+            
+            <div class="menu-grid" id="menuGrid">
+                <div class="menu-item" data-category="sushi">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=d7005f9a280c5f0a51243b7d8e47e3e6886888b2-5754327-images-thumbs&n=13" alt="Salmon Nigiri">
+                        <div class="nutrition-icon" data-id="1">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Salmon Nigiri</h3>
+                        <p>Fresh salmon on rice base</p>
+                        <div class="price">
+                            <span>180 RUB</span>
+                            <button class="btn add-to-cart" data-name="Salmon Nigiri" data-price="180">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="sushi">
+                    <div class="image-container">
+                        <img src="https://yandex-images.clstorage.net/HVW9C6382/b84210xd/DlzV8b0g0hXPcWIqx2q2ELVTJ8deuo81c_MoAeVw_mtcCagUAMv_HxaqUScHl59b4PmtVmu_niwL9DC8zGJdrKvNkJDp5KZ0avRGW6IqNiDlcvITb6tKlTYijCQgMcvr6bnoJ9YM_S0gbZdl8GB4L2Dc2AZ_XlpIeBeEmi9gSiluDCdTzKDRc43CYe93y5SwJ2ICBO65KwRm8akXo_O9WbxcHFcErh6_M120pcGASZ_xnXjHj4vIyKmU4ipO8spZfK9UQ-8goaJOMIBNJnk2sBdzsYSPq4rFRQPY5pOg_oifPK9Ehm5vH6NcFQdSwntcoj7LZk9KaiqLJ2Ia_EHr--99JLOuUeJjP1PybAbIZ_FlwfPX7Ii7dcYy-ncis9woDs_vJDTN718zveZlQoGojVCdGRZO6iu4SVVDqm9CmgpszeUDbCMRAF4AYw-kqQaSl2BRNQ-puXVEMUpksjB9Ge8-HndmXh5d403mlTMian4D7ikGzFspi2sHIkpNQvhLDG91Ib2hkkAu82N9tFmnkHRSABXOu_ulZVELRyKiPupvDc9VFZ6MnbEtxMXBsDlsIV0axU-7qym7BpEZbONa-w7MpGCP4zOjX3FBD4VpleB0IDEVXYhKxVYhy3TgcE753Nx8dDT_vH3Q_yVEYMKrj1HOWJeMCalb-UUhiW1T6TjMjPbirGKgME0xgT2kWzWzlHCQNox62vdXI8glsNPMSp1MnCV1T32cEcwWVFNSmU9ijJh0X3hpSVnEwOpfExqJrJ6FkC9R4KA90QPvJCmkUlSgshfP2WmUtjIrNqFDzmktL_8mV5xsnlOPBGXTkJq8sn8qlL-YmTh5VrD57vBYKLxflTIeQ6PDPzHzfMQLJnF1QbPnbIjq1QVAiGTjQb1rPl-MhISe3c5TrxbF4OAJreBceyTfeHl7W7ViKF7gqaku_VWwHHFBAz0TUXyGuAdSx4Aipz-aSLVXkKrUAoONI" alt="Tuna Nigiri">
+                        <div class="nutrition-icon" data-id="2">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tuna Nigiri</h3>
+                        <p>Tender tuna on rice base</p>
+                        <div class="price">
+                            <span>200 RUB</span>
+                            <button class="btn add-to-cart" data-name="Tuna Nigiri" data-price="200">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="rolls">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=b999e387b6c0c737cc849fca88bab8b53c18dadd-9149794-images-thumbs&n=13" alt="Philadelphia Roll">
+                        <div class="nutrition-icon" data-id="3">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Philadelphia Roll</h3>
+                        <p>Salmon, cream cheese, cucumber, avocado</p>
+                        <div class="price">
+                            <span>420 RUB</span>
+                            <button class="btn add-to-cart" data-name="Philadelphia Roll" data-price="420">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="rolls">
+                    <div class="image-container">
+                        <img src="https://yandex-images.clstorage.net/HVW9C6382/b84210xd/DlzV8b0g0hXPcWIqx2q2ELVTJ8deuo81c_MoAeXQ694cDK1EBcu_GmafNGdCN_retalNM7uf-0k-wRD5GVIonN4dkMDJ5OYEapRmG0PudmAlEtN2ijqLRLbTmXBQ8B9evIkoARYNHS0RvJa0QICYXBFcKKZuiz-ICreDbV9xGpt-3fRyTgBiA30DQFzXq5fCtdDDhp27mSUng0pVY3PdKA7czfVm37_Og6-ml4CxeG2hzWkGr3vqGopmAAvvEIgbDs9XAV4j4nOswLK9dfolYLXg0jUd2ouE5qC4JJJDjmvf_61GdV1_vyM_pzYiIjpfYp7KtQ67K7hoRLOL36I7OqxchXGuYpMwbbHRz1TalDH0kmB3TrmotVYjiQYD8p1Jf25eBhXv3D9jr0bFQDJ5jLNsaWd-uov5-obBqm8xOEtd3zWwHqDhww7Qgl43ePVQl2DB1axaibdWoYq2EGIe6E6Pr_dGvU_OYX-2xbBD2k5APxpXbjg6-8mkk8uPEzgpHL-XIDxxY0BOoHFeRWgF8ZWD84SMm5v1hoDq9zPyjKu9D5wmZM6PXKEt1ufgsUgdUh2pZK272nlrdJJ43DKZi6y9NPF9QyHhrdHzfDdZNcPlg4G1jAioROazmjcAMF7brrxNlUXv7mxBTAQGYRA6j7FtOib_eGh7GTbRyEwzKThvf3Sj_2Cgcj7Ds7wFeAdjtmPRFK_ZWtTUspg0UWD9WR393XUUrl6toI03NXEjqr1xXnjmHKsZuwuWUCkvAWnL3h9m0I3jkzKus1M-1_h18lejATaOmvlnt1OJ10JxbVs-Tb4WF4yNvKLPdCdAo2i-go6LVPxL-Ut6tsJZPLCKiX8Pp8Av0oFxzbGzzkQYV3B0guA3fjmo5Pbg-3QQM28oPF7OZbVfjw3yz1Q14JAYLZPcqAVMKxmrOZQhi-0Amnj-nQUArdCzkw2zkWxEWuRRVzAhpj5qukaWsitWoNKtE" alt="California Roll">
+                        <div class="nutrition-icon" data-id="4">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>California Roll</h3>
+                        <p>Crab, avocado, cucumber, tobiko, mayonnaise</p>
+                        <div class="price">
+                            <span>380 RUB</span>
+                            <button class="btn add-to-cart" data-name="California Roll" data-price="380">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="rolls">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=ec0f3eaa9fd2670c70ec97cd912591200cb08372-7662997-images-thumbs&n=13" alt="Sakura Roll">
+                        <div class="nutrition-icon" data-id="5">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Sakura Roll</h3>
+                        <p>Eel, cream cheese, cucumber, unagi sauce</p>
+                        <div class="price">
+                            <span>480 RUB</span>
+                            <button class="btn add-to-cart" data-name="Sakura Roll" data-price="480">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="rolls">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=95bf7ceea0ea76c8015c6dc0b2c0d3d4f5c7bf03-4568831-images-thumbs&n=13" alt="Green Dragon Roll">
+                        <div class="nutrition-icon" data-id="6">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Green Dragon Roll</h3>
+                        <p>Eel, avocado, cucumber, unagi sauce</p>
+                        <div class="price">
+                            <span>520 RUB</span>
+                            <button class="btn add-to-cart" data-name="Green Dragon Roll" data-price="520">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="onigiri">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=1c5137aa7c94ed1db1f9fbd1ce90e07eac162ea1-8210344-images-thumbs&n=13" alt="Salmon Onigiri">
+                        <div class="nutrition-icon" data-id="7">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Salmon Onigiri</h3>
+                        <p>Rice, salmon, breaded nori, cream cheese, sauce</p>
+                        <div class="price">
+                            <span>180 RUB</span>
+                            <button class="btn add-to-cart" data-name="Salmon Onigiri" data-price="180">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="onigiri">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=8501831316aff3cd05ceda42578f661e6f2093e8-5146492-images-thumbs&n=13" alt="Eel Onigiri">
+                        <div class="nutrition-icon" data-id="8">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Eel Onigiri</h3>
+                        <p>Rice, eel, spicy sauce, cucumber, nori</p>
+                        <div class="price">
+                            <span>220 RUB</span>
+                            <button class="btn add-to-cart" data-name="Eel Onigiri" data-price="220">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="onigiri">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=c2e6c594020e4c7eacd5c7df4919fcb46a70739c-5319082-images-thumbs&n=13" alt="Chicken Onigiri">
+                        <div class="nutrition-icon" data-id="9">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chicken Onigiri</h3>
+                        <p>Rice, teriyaki chicken, spicy sauce, cucumber, nori</p>
+                        <div class="price">
+                            <span>160 RUB</span>
+                            <button class="btn add-to-cart" data-name="Chicken Onigiri" data-price="160">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="sashimi">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=052b3bc381596fad26dfbe97e4c7fe070eee5b15-13015897-images-thumbs&n=13" alt="Salmon Sashimi">
+                        <div class="nutrition-icon" data-id="10">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Salmon Sashimi</h3>
+                        <p>Fresh salmon</p>
+                        <div class="price">
+                            <span>580 RUB</span>
+                            <button class="btn add-to-cart" data-name="Salmon Sashimi" data-price="580">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="sashimi">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=3f0a8e84f63f8772586aec844691928e563576e3-5235735-images-thumbs&n=13" alt="Tuna Sashimi">
+                        <div class="nutrition-icon" data-id="11">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tuna Sashimi</h3>
+                        <p>Fresh tuna</p>
+                        <div class="price">
+                            <span>620 RUB</span>
+                            <button class="btn add-to-cart" data-name="Tuna Sashimi" data-price="620">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=032defe9149e1b84a2232507d7f24f7f95d38faf-10384987-images-thumbs&n=13" alt="Berry Mojito">
+                        <div class="nutrition-icon" data-id="12">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Berry Mojito</h3>
+                        <p>Mint, berries, lime, sugar syrup, soda</p>
+                        <div class="price">
+                            <span>220 RUB</span>
+                            <button class="btn add-to-cart" data-name="Berry Mojito" data-price="220">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=38794b89216e3fd18b7fbb02e982ec3438752017-4591692-images-thumbs&n=13" alt="Sakura Lemonade">
+                        <div class="nutrition-icon" data-id="13">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Sakura Lemonade</h3>
+                        <p>Homemade lemonade with sakura syrup</p>
+                        <div class="price">
+                            <span>190 RUB</span>
+                            <button class="btn add-to-cart" data-name="Sakura Lemonade" data-price="190">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=79bee4afbe5b3b2537a04ac26d53e8259b230941-8217704-images-thumbs&n=13" alt="Green Tea">
+                        <div class="nutrition-icon" data-id="14">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Green Tea</h3>
+                        <p>Premium green tea</p>
+                        <div class="price">
+                            <span>150 RUB</span>
+                            <button class="btn add-to-cart" data-name="Green Tea" data-price="150">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="sets">
+                    <div class="image-container">
+                        <img src="https://static.tildacdn.com/tild3634-3938-4165-b034-363266623066/IMG_3152-min.jpg" alt="Sakura Set">
+                        <div class="nutrition-icon" data-id="15">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Sakura Set</h3>
+                        <p>Assortment of 24 pieces: Philadelphia, baked California and Tokyo</p>
+                        <div class="price">
+                            <span>1100 RUB</span>
+                            <button class="btn add-to-cart" data-name="Sakura Set" data-price="1100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="sets">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=c7f798e83f57a37239cb290ec8a6108254d5a914-12629054-images-thumbs&n=13" alt="Fujiyama Set">
+                        <div class="nutrition-icon" data-id="16">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Fujiyama Set</h3>
+                        <p>36 pieces: the most delicious rolls of our restaurant</p>
+                        <div class="price">
+                            <span>1700 RUB</span>
+                            <button class="btn add-to-cart" data-name="Fujiyama Set" data-price="1700">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="desserts">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=b1e1d007a617f6e5c1c785dcddf340734771f025-5248827-images-thumbs&n=13" alt="Strawberry Mochi">
+                        <div class="nutrition-icon" data-id="17">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Strawberry Mochi</h3>
+                        <p>Traditional rice cakes with strawberry</p>
+                        <div class="price">
+                            <span>280 RUB</span>
+                            <button class="btn add-to-cart" data-name="Strawberry Mochi" data-price="280">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="desserts">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=67a3f99e81675d00511c83ea87557e6792ad6730-9099210-images-thumbs&n=13" alt="Matcha Cheesecake">
+                        <div class="nutrition-icon" data-id="18">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Matcha Cheesecake</h3>
+                        <p>Tender cheesecake with green tea powder</p>
+                        <div class="price">
+                            <span>320 RUB</span>
+                            <button class="btn add-to-cart" data-name="Matcha Cheesecake" data-price="320">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="extras">
+                    <div class="image-container">
+                        <img src="https://yandex-images.clstorage.net/HVW9C6382/b84210xd/DlzV8b0g0hXPcWIqx2q2ELVTJ8deuo81c_MoAeClu34pDOgRsN6KSnOKZFInl__O5cldQy6amywbweWpTEJN-dt45aWZ5KYEOiS2m6IqNiDlcvITb6tKlTYijCQgMcvr6bnoJ9YM_S0gbZdl8GB4L2Dc2AZ_XlpIeBeEmi9gSiluDCdTzKDRc43CYe93y5SwJ2ICBO65KwRm8akXo_O9WbxcHFcErh6_M120pcGASZ_xnXjHj4vIyKmU4ipO8spZfK9UQ-8goaJOMIBNJnk2sBdzsYSPq4rFRQPY5pOg_oifPK9Ehm5vH6NcFQdSwntcoj7LZk9KaiqLJ2Ia_EHr--99JLOuUeJjP1PybAbIZ_FlwfPX7Ii7dcYy-ncis9woDs_vJDTN718zveZlQoGojVCdGRZO6iu4SVVDqm9CmgpszeUDbCMRAF4AYw-kqQaSl2BRNQ-puXVEMUpksjB9Ge8-HndmXh5d403mlTMian4D7ikGzFspi2sHIkpNQvhLDG91Ib2hkkAu82N9tFmnkHRSABXOu_ulZVELRyKiPupvDc9VFZ6MnbEtxMXBsDlsIV0axU-7qym7BpEZbONa-w7MpGCP4zOjX3FBD4VpleB0IDEVXYhKxVYhy3TgcE753Nx8dDT_vH3Q_yVEYMKrj1HOWJeMCalb-UUhiW1T6TjMjPbirGKgME0xgT2kWzWzlHCQNox62vdXI8glsNPMSp1MnCV1T32cEcwWVFNSmU9ijJh0X3hpSVnEwOpfExqJrJ6FkC9R4KA90QPvJCmkUlSgshfP2WmUtjIrNqFDzmktL_8mV5xsnlOPBGXTkJq8sn8qlL-YmTh5VrD57vBYKLxflTIeQ6PDPzHzfMQLJnF1QbPnbIjq1QVAiGTjQb1rPl-MhISe3c5TrxbF4OAJreBceyTfeHl7W7ViKF7gqaku_VWwHHFBAz0TUXyGuAdSx4Aipz-aSLVXkKrUAoONI" alt="Sauce Set">
+                        <div class="nutrition-icon" data-id="19">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Sauce Set</h3>
+                        <p>Soy sauce</p>
+                        <div class="price">
+                            <span>120 RUB</span>
+                            <button class="btn add-to-cart" data-name="Sauce Set" data-price="120">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="extras">
+                    <div class="image-container">
+                        <img src="https://yandex-images.clstorage.net/HVW9C6382/b84210xd/DlzV8b0g0hXPcWIqx2q2ELVTJ8deuo81c_MoAeDQ_h4JedgBBb66XyP6dBc3R_-LsKl4Fnu_m1l7gRDJCWc4yes91dXZ5KY0SvRmm7IqNiDlcvITb6tKlTYijCQgMcvr6bnoJ9YM_S0gbZdl8GB4L2Dc2AZ_XlpIeBeEmi9gSiluDCdTzKDRc43CYe93y5SwJ2ICBO65KwRm8akXo_O9WbxcHFcErh6_M120pcGASZ_xnXjHj4vIyKmU4ipO8spZfK9UQ-8goaJOMIBNJnk2sBdzsYSPq4rFRQPY5pOg_oifPK9Ehm5vH6NcFQdSwntcoj7LZk9KaiqLJ2Ia_EHr--99JLOuUeJjP1PybAbIZ_FlwfPX7Ii7dcYy-ncis9woDs_vJDTN718zveZlQoGojVCdGRZO6iu4SVVDqm9CmgpszeUDbCMRAF4AYw-kqQaSl2BRNQ-puXVEMUpksjB9Ge8-HndmXh5d403mlTMian4D7ikGzFspi2sHIkpNQvhLDG91Ib2hkkAu82N9tFmnkHRSABXOu_ulZVELRyKiPupvDc9VFZ6MnbEtxMXBsDlsIV0axU-7qym7BpEZbONa-w7MpGCP4zOjX3FBD4VpleB0IDEVXYhKxVYhy3TgcE753Nx8dDT_vH3Q_yVEYMKrj1HOWJeMCalb-UUhiW1T6TjMjPbirGKgME0xgT2kWzWzlHCQNox62vdXI8glsNPMSp1MnCV1T32cEcwWVFNSmU9ijJh0X3hpSVnEwOpfExqJrJ6FkC9R4KA90QPvJCmkUlSgshfP2WmUtjIrNqFDzmktL_8mV5xsnlOPBGXTkJq8sn8qlL-YmTh5VrD57vBYKLxflTIeQ6PDPzHzfMQLJnF1QbPnbIjq1QVAiGTjQb1rPl-MhISe3c5TrxbF4OAJreBceyTfeHl7W7ViKF7gqaku_VWwHHFBAz0TUXyGuAdSx4Aipz-aSLVXkKrUAoONI" alt="Ginger and Wasabi">
+                        <div class="nutrition-icon" data-id="20">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Ginger and Wasabi</h3>
+                        <p>Extra portion of ginger and wasabi</p>
+                        <div class="price">
+                            <span>80 RUB</span>
+                            <button class="btn add-to-cart" data-name="Ginger and Wasabi" data-price="80">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="extras">
+                    <div class="image-container">
+                        <img src="https://avatars.mds.yandex.net/i?id=aad9b481949fde2a7f2477875518637ac65d9cbf-5859452-images-thumbs&n=13" alt="Wooden Chopsticks">
+                        <div class="nutrition-icon" data-id="21">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Wooden Chopsticks</h3>
+                        <p>Set of wooden chopsticks for eating</p>
+                        <div class="price">
+                            <span>40 RUB</span>
+                            <button class="btn add-to-cart" data-name="Wooden Chopsticks" data-price="40">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>Table Reservation</h2>
+            <div class="booking-content">
+                <div class="booking-form">
+                    <form id="reservationForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Smith" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" class="form-control" required>
+                                <option value="" disabled selected>Select number</option>
+                                <option value="1">1 person</option>
+                                <option value="2">2 people</option>
+                                <option value="3">3 people</option>
+                                <option value="4">4 people</option>
+                                <option value="5">5 people</option>
+                                <option value="6">6 people</option>
+                                <option value="7">7 people</option>
+                                <option value="8">8 people</option>
+                                <option value="9">9 people</option>
+                                <option value="10">10+ people</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <select id="time" class="form-control" required>
+                                <option value="" disabled selected>Select time</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Table Type</label>
+                            <div class="table-options">
+                                <div class="table-option" data-type="standard">
+                                    <i class="fas fa-chair"></i>
+                                    <span>Standard</span>
+                                </div>
+                                <div class="table-option" data-type="window">
+                                    <i class="fas fa-window-maximize"></i>
+                                    <span>Window View</span>
+                                </div>
+                                <div class="table-option" data-type="vip">
+                                    <i class="fas fa-crown"></i>
+                                    <span>VIP</span>
+                                </div>
+                                <div class="table-option" data-type="private">
+                                    <i class="fas fa-door-closed"></i>
+                                    <span>Private Room</span>
+                                </div>
+                            </div>
+                            <input type="hidden" id="tableType" value="standard">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comments">Comment (optional)</label>
+                            <textarea id="comments" class="form-control" rows="3" placeholder="Special requests or requirements"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Book a Table</button>
+                    </form>
+                </div>
+                
+                <div class="booking-info">
+                    <h3>Reservation Rules</h3>
+                    <div class="booking-detail">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <p><strong>Booking hours:</strong></p>
+                            <p>Mon-Sun: 12:00 - 22:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-detail">
+                        <i class="fas fa-users"></i>
+                        <div class="contact-text">
+                            <p><strong>Table reservation:</strong></p>
+                            <p>Tables can be booked 1-7 days in advance</p>
+                            <p>For groups of 8 or more, please book at least 3 days in advance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-detail">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="contact-text">
+                            <p><strong>Important information:</strong></p>
+                            <p>The reservation is held for 15 minutes after the scheduled time</p>
+                            <p>Cancellation is possible up to 3 hours before the visit</p>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-detail">
+                        <i class="fas fa-gift"></i>
+                        <div class="contact-text">
+                            <p><strong>Special offers:</strong></p>
+                            <p>Reserving a VIP table (private room with large table for negotiations) - free dessert</p>
+                            <p>Reservation on your birthday - 15% discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Our Contacts</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Visit Us</h3>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <p>Irkutsk, Lermontov st., 83A</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">
+                            <p>+7 (3952) 123-45-67</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <p>Mon-Thu: 11:00 - 23:00</p>
+                            <p>Fri-Sun: 12:00 - 00:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-truck"></i>
+                        <div class="contact-text">
+                            <p>Delivery: 12:00 - 22:00</p>
+							<p>Pickup: 12:00 - 23:00</p>
+							<p>Delivery cost: 500 RUB</p>
+                            <p>Free delivery for orders over 2000 RUB</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae4c6d0e8f4b28d7e9c4b3f2d1a6b3e3b5a3f4c0e8d4c3a0d1a6d3c5a0b4e8d3b&amp;source=constructor" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sakura Restaurant</h3>
+                    <p>The authentic taste of Japan using fresh ingredients.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                            
+                <div class="footer-column">
+                    <h3>Contacts</h3>
+                    <p>Irkutsk, Lermontov st., 81A</p>
+                    <p>+7 (3952) 123-45-67</p>
+                    <p>sakura@restaurant.ru</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Restaurant Sakura. Irkutsk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">0 RUB</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    
+    <div class="nutrition-modal" id="nutritionModal">
+        <div class="nutrition-content">
+            <span class="close-nutrition">&times;</span>
+            <div class="nutrition-image" id="nutritionImage"></div>
+            <div class="nutrition-details">
+                <h3 id="nutritionTitle"></h3>
+                <div class="nutrition-weight">Serving weight: <span id="totalWeight"></span> g</div>
+                <table class="nutrition-table">
+                    <thead>
+                        <tr>
+                            <th>Nutritional value</th>
+                            <th>Per 100g</th>
+                            <th>Per serving</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Calories</td>
+                            <td class="nutrition-value" id="calories100"></td>
+                            <td class="nutrition-value" id="caloriesTotal"></td>
+                        </tr>
+                        <tr>
+                            <td>Proteins</td>
+                            <td class="nutrition-value" id="protein100"></td>
+                            <td class="nutrition-value" id="proteinTotal"></td>
+                        </tr>
+                        <tr>
+                            <td>Fats</td>
+                            <td class="nutrition-value" id="fat100"></td>
+                            <td class="nutrition-value" id="fatTotal"></td>
+                        </tr>
+                        <tr>
+                            <td>Carbohydrates</td>
+                            <td class="nutrition-value" id="carbohydrate100"></td>
+                            <td class="nutrition-value" id="carbohydrateTotal"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="booking-modal" id="bookingModal">
+        <div class="booking-modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Reservation Confirmed!</h3>
+            <p id="confirmationText"></p>
+            <button class="close-booking" id="closeBooking">Close</button>
+        </div>
+    </div>
+
+    <script src="3.js"></script>
+</body>
+</html>
